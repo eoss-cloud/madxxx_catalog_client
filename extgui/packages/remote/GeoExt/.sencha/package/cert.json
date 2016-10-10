@@ -1,0 +1,23 @@
+{
+  "data": {
+    "created": "2016-09-05T07:28:33Z",
+    "email": "dev@geoext.org",
+    "expires": "2021-09-06T00:00:00Z",
+    "name": "GeoExt Contributors",
+    "uuid": "a9c71e72-d322-4db7-99aa-77f3db8c4b5d"
+  },
+  "publicKey": {
+    "algorithm": "RSA",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkOqSxv0IOcZO4pDWcGkYTySUNfEmIZ7YMmf6Q8PN/70gytMV+QI2dFZhNAyZhyZ6jkdWfkS53JvWvE1JWa5nEyWneS1SJ/QCQV05blje+sgMjvQ6o7olgPMgMVrAlGodH2HPf0B1sPmVCYAS7ifqH9gtDfuS3TvfFLuA+WfAYIAgs5naw6fqd7RnZ2YubTRDCIS8G64aXCoBQk0Raros0noo6F23/t6vwyfl6UfA7BofGJF7VuUypgIbDcnjcePda4U1wcnhXXARfIPEMklejdd0FQ+6FWyUMC1+RFEyAM/H/WLCU1uojXPtzZgtCjpGSqRjUw6Xzota4/TbVr2uwQIDAQAB"
+  },
+  "signatures": [
+    {
+      "name": "GeoExt Contributors",
+      "uuid": "a9c71e72-d322-4db7-99aa-77f3db8c4b5d",
+      "created": "2016-09-05T07:28:38Z",
+      "algorithm": "SHA1withRSA",
+      "nonce": "bUlUEgCWq/g\u003d",
+      "signature": "iXMg4EHdc5pk48jqVZ3sE4h9LPMIsxytu7hmxCFo815DNq9hwcAlh4hqzRKq65GlTd+XnfxxONXR5wPaFTfHcDCF4J6SRd+aO1kuTEdHYmAsmLhqUouthCAf7nJYgEBFOf2Juz5bncg44iVB/Fi0F1DcQ6djOeZp56tB2tZWf0GmuHB3lPdF71bGbGC3j2J5A/SxsTZP4B0VkYO7BpaeipccCGQrJPd7tNVc2FoIJDTsPS9yHeB7cQH6ObMOLCRRgCr4m0aa8CQbnh1G43RujrOQNPzAu/0dPgTSeCIUlPOV2CB5DJAiCqoAPw+BYC/QIAkfqN7Y+LaiiDQsxw/gmQ\u003d\u003d"
+    }
+  ]
+}

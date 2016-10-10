@@ -1,0 +1,100 @@
+
+
+.content-panel-body  {
+    color: blue;
+}
+
+#datasets {
+    background-color: #fff;
+    text-shadow: #fff 0 1px 0;
+    position: relative;
+    display: block;
+    height: auto;
+}
+
+#datasets div.dataset img {
+    margin-bottom: 13px;
+}
+
+#datasets div.dataset {
+    float: left;
+    padding: 5px 5px;
+    margin: 5px;
+/*    margin: 10px 0 0 25px;*/
+    text-align: center;
+    line-height: 14px;
+    color: #333;
+    font-size: 10px;
+    font-family: "Helvetica Neue",sans-serif;
+    height: 220px;
+    width: 400px;
+    overflow: hidden;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.x-ie6 #datasets div.dataset,
+.x-ie7 #datasets div.dataset,
+.x-ie8 #datasets div.dataset {
+    border-top: none;
+    padding: 3px 2px;
+    margin: 2px;
+}
+
+#datasets div.dataset-hover {
+    background-color: rgba(54,140,90,0.2);
+}
+
+#datasets .x-item-selected {
+    background-color: #D3E1F1 !important;
+}
+
+#datasets div.dataset strong {
+    color: #000;
+    display: block;
+}
+
+#datasets div.dataset span {
+    color: #999;
+}
+
+#datasets td {
+    text-align: right;
+    vertical-align: middle;
+    border-bottom: 1px solid #00676a;
+    font-weight: bold;
+}
+
+#datasets th {
+    text-align: right;
+    vertical-align: middle;
+}
+
+#aws_thumbnailimage {
+    width: 66px;
+    height: 22px;
+    background: url(images/aws.png) no-repeat;
+    border-bottom: 1px solid #00676a;
+}
+
+#awsbucket_thumbnailimage {
+    width: 66px;
+    height: 22px;
+    background: url(images/aws_bucket.jpg) no-repeat;
+    border-bottom: 1px solid #00676a;
+}
+
+#google_thumbnailimage {
+    width: 66px;
+    height: 22px;
+    background: url(images/google.png) no-repeat;
+    border-bottom: 1px solid #00676a;
+}
+
+#usgs_thumbnailimage {
+    width: 66px;
+    height: 22px;
+    background: url(images/usgs.png) no-repeat;
+    border-bottom: 1px solid #00676a;
+}
+

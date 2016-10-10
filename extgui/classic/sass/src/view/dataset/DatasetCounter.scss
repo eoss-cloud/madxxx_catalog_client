@@ -1,0 +1,71 @@
+.tilecounter {
+    float:left;
+    background: radial-gradient( 5px -9px, circle, white 8%, darkseagreen 26px );
+    background-color: darkseagreen;
+    border: 2px solid white;
+    border-radius: 12px; /* one half of ( (border * 2) + height + padding ) */
+    color: white;
+    font: bold 15px/13px Helvetica, Verdana, Tahoma;
+    height: 25px;
+    min-width: 25px;
+    padding: 4px 3px 0 3px;
+    text-align: center;
+}
+
+.tilecounterall {
+    float:left;
+    background: radial-gradient( 5px -9px, circle, white 8%, darkgreen 26px );
+    background-color: darkgreen;
+    border: 2px solid white;
+    border-radius: 12px; /* one half of ( (border * 2) + height + padding ) */
+    color: white;
+    font: bold 15px/13px Helvetica, Verdana, Tahoma;
+    height: 25px;
+    min-width: 25px;
+    padding: 4px 3px 0 3px;
+    text-align: center;
+}
+
+.scenecounter {
+    float:left;
+    background: radial-gradient( 5px -9px, circle, white 8%, lightblue 26px );
+    background-color: lightblue;
+    border: 2px solid white;
+    border-radius: 12px; /* one half of ( (border * 2) + height + padding ) */
+    color: white;
+    font: bold 15px/13px Helvetica, Verdana, Tahoma;
+    height: 25px;
+    min-width: 25px;
+    padding: 4px 3px 0 3px;
+    text-align: center;
+}
+
+.scenecounterall {
+    float:left;
+    background: radial-gradient( 5px -9px, circle, white 8%, royalblue 26px );
+    background-color: royalblue;
+    border: 2px solid white;
+    border-radius: 12px; /* one half of ( (border * 2) + height + padding ) */
+    color: white;
+    font: bold 15px/13px Helvetica, Verdana, Tahoma;
+    height: 25px;
+    min-width: 25px;
+    padding: 4px 3px 0 3px;
+    text-align: center;
+}
+
+.normal {
+    float:left;
+    color: darkgrey;
+    font: bold 12px Helvetica, Verdana, Tahoma;
+    text-align: center;
+    padding: 6px 3px 0 3px;
+}
+
+.sep {
+    float:left;
+    color: darkgrey;
+    font: bold 25px Helvetica, Verdana, Tahoma;
+    text-align: center;
+    padding: 2px 3px 0 3px;
+}

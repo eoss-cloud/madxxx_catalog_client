@@ -1,0 +1,73 @@
+.csvdown {
+  float: left;
+  background: radial-gradient(5px -9px, circle, white 8%, darkgrey 26px);
+  background-color: darkgrey;
+  border: 2px solid white;
+  border-radius: 12px; /* one half of ( (border * 2) + height + padding ) */
+  color: white;
+  font: bold 15px/13px Helvetica, Verdana, Tahoma;
+  height: 25px;
+  min-width: 25px;
+  padding: 4px 3px 0 3px;
+  text-align: center;
+  /* unvisited link */
+  a:link {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* visited link */
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: lightcyan;
+    text-decoration: none;
+  }
+
+  /* selected link */
+  a:active {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.xlsdown {
+  float: left;
+  background: radial-gradient(5px -9px, circle, white 8%, darkseagreen 26px);
+  background-color: darkseagreen;
+  border: 2px solid white;
+  border-radius: 12px; /* one half of ( (border * 2) + height + padding ) */
+  color: white;
+  font: bold 15px/13px Helvetica, Verdana, Tahoma;
+  height: 25px;
+  min-width: 25px;
+  padding: 4px 3px 0 3px;
+  text-align: center;
+  /* unvisited link */
+  a:link {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* visited link */
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: lightcyan;
+    text-decoration: none;
+  }
+
+  /* selected link */
+  a:active {
+    color: white;
+    text-decoration: none;
+  }
+}

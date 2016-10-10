@@ -1,0 +1,46 @@
+
+$app-header-background-color: #fff;
+$app-footer-background-color: rgba(70, 140, 130, 0.2);
+
+
+.app-header {
+    background-color: $app-header-background-color;
+    border-bottom: 1px solid darken(#00676a, 15);
+
+}
+
+.app-header-title {
+    padding: 15px 0 10px 0;
+    color: #00676a;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.app-header-subtitle {
+    padding: 15px 0 10px 0;
+    color: #00676a;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.app-header-logo {
+    width: 100px;
+    height: 40px;
+    background: url(images/eoss_logo_colour.png) no-repeat;
+}
+
+.app-footer {
+    background-color: $app-footer-background-color;
+    border-top: 1px solid darken(#00676a, 15);
+}
+
+.app-footer-logo {
+    width: 32px;
+    height: 20px;
+    background: url(images/eoss_logo_small.png) no-repeat;
+}
+
+.app-footer-text {
+    color: #000000;
+    font-size: 10px;
+}
