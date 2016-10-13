@@ -3,7 +3,7 @@
  */
 
 
-var baseUrl = 'http://localhost:8000/';
+var baseUrl = 'http://api.eoss.cloud/';
 
 Ext.define('EossEOCatalog.utilities.BaseUrls', {
     singleton: true,
