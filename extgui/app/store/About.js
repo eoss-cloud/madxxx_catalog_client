@@ -25,7 +25,7 @@ Ext.define('EossEOCatalog.store.About', {
                 aux: ""
             }, {
                 category: 'Copyright',
-                content: " &copy; 2006, EOSS GmbH",
+                content: " &copy; 2016, EOSS GmbH",
                 aux: ""
             }
         ]
