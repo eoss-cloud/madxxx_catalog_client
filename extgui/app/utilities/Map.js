@@ -1,4 +1,15 @@
 /**
+ * Class with functions for OpenLayers vector layer styling
+ *
+ * @summary   Class with functions for OpenLayers vector layer styling
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
+/**
  * Created by sgebhardt on 14.09.16.
  */
 

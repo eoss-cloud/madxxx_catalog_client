@@ -1,4 +1,15 @@
 /**
+ * Class with functions required in app
+ *
+ * @summary   Class with functions required in app
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
+/**
  * Created by sgebhardt on 09.09.16.
  */
 
@@ -236,22 +247,6 @@ Ext.define('EossEOCatalog.utilities.Util', {
             var xlsurl = EossEOCatalog.utilities.BaseUrls.catalog_search_download_xls_url + '?from_date=' + d.start_date + '&to_date=' + d.end_date + '&sensor=' + s.name + '&ref_group=' + region.ref_group + '&ref_id=' + region.ref_id + '&clouds=' + o.clouds;
 
             Ext.ComponentQuery.query("datasetdownload")[0].setHtml('<div class="xlsdown"><a href="'+xlsurl+'">xls</a></div> <div class="csvdown"><a href="'+csvurl+'">csv</a></div>' );
-
-
-            // var slider = Ext.ComponentQuery.query("cloudslider")[0];
-            // slider.setValue(1, o.clouds, true);
-
-
-            // var summary_store = Ext.ComponentQuery.query("aggregatetilecloudpanel")[0].getStore();
-            // var summary_store = Ext.getCmp('aggregatetilecloudpolarchart').getStore();
-            // summary_store.getProxy().setExtraParam('from_date', d.start_date);
-            // summary_store.getProxy().setExtraParam('to_date', d.end_date);
-            // summary_store.getProxy().setExtraParam('sensor', s.name);
-            // summary_store.getProxy().setExtraParam('ref_group', region.ref_group);
-            // summary_store.getProxy().setExtraParam('ref_id', region.ref_id);
-            // summary_store.getProxy().setExtraParam('clouds', o.clouds);
-            // summary_store.load();
-
 
         }
 

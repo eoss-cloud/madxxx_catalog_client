@@ -1,4 +1,15 @@
 /**
+ * Class for global service base url variables
+ *
+ * @summary   Class for global service base url variables
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
+/**
  * Created by sgebhardt on 09.09.16.
  */
 
