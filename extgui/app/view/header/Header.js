@@ -1,3 +1,16 @@
+/**
+ * EOSS catalog system
+ *
+ * Header container widget
+ *
+ * @summary   Header container widget
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
 document.title = 'EOSS Image Catalog Lite';
 document.subtitle = 'Get the images that suit your project';
 

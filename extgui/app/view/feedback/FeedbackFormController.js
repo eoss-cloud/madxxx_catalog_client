@@ -1,3 +1,14 @@
+/**
+ * EOSS catalog system
+ *
+ * @summary   Controller of the feedback form window realising feadback post
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
 Ext.define('EossEOCatalog.view.feedback.FeedbackFormController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.feedback-feedbackform',

@@ -1,3 +1,14 @@
+/**
+ * EOSS catalog system
+ *
+ * @summary   Feedback form window for submission of user feedack
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
 Ext.define('EossEOCatalog.view.feedback.FeedbackForm', {
     extend: 'Ext.form.Panel',
     xtype: 'feedbackformpanel',

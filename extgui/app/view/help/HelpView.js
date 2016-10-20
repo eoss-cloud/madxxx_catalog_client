@@ -1,14 +1,21 @@
+/**
+ * EOSS catalog system
+ *
+ * @summary   Panel widget representing app info
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
 Ext.define('EossEOCatalog.view.help.HelpView', {
     extend: 'Ext.grid.Panel',
     xtype: 'helpview',
 
     requires: [
-        'EossEOCatalog.view.help.HelpViewController',
         'EossEOCatalog.store.About'
     ],
-
-    controller: 'help-helpview',
-    //title: 'App info',
 
 
     store: {

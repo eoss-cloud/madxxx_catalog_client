@@ -1,4 +1,17 @@
 /**
+ * EOSS catalog system
+ *
+ * Footer container widget
+ *
+ * @summary   Footer container widget
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
+/**
  * Created by sgebhardt on 16.09.16.
  */
 
