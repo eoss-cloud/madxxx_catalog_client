@@ -1,4 +1,15 @@
 /**
+ * The store for sensor platform implementing the platform model
+ *
+ * @summary   The store for sensor platform
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
+/**
  * Created by sgebhardt on 15.09.16.
  */
 

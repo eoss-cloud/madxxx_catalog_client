@@ -1,4 +1,15 @@
 /**
+ * The store for the website about section giving credits, copyright and general information.
+ *
+ * @summary   The store for the website about section
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
+/**
  * Created by sgebhardt on 03.10.16.
  */
 

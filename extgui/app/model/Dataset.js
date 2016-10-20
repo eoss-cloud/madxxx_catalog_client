@@ -1,4 +1,15 @@
 /**
+ * The model for a catalog dataset entity
+ *
+ * @summary   The model for a catalog dataset
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
+/**
  * Created by sgebhardt on 05.09.16.
  */
 

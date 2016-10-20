@@ -1,2 +1,2 @@
 Compass.add_project_configuration('../../../../../sass/config.rb')
-cache_path = '/Users/wehrmann/PycharmProjects/madxxx/catalog/client/extgui/build/.sass-cache'
+cache_path = '/Users/sgebhardt/pycharmprojects/madxxx_catalog_client/extgui/build/.sass-cache'

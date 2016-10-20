@@ -1,4 +1,15 @@
 /**
+ * The store for geographic names implementing the geonames model and defining the service proxy
+ *
+ * @summary   The store for geographic names
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
+/**
  * Created by sgebhardt on 08.09.16.
  */
 
