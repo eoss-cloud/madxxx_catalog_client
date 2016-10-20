@@ -1,3 +1,16 @@
+/**
+ * EOSS catalog system
+ *
+ * Controller for the autocomplete text box implementing on text edit and selection callback functions
+ *
+ * @summary   Controller for the autocomplete text box
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
 Ext.define('EossEOCatalog.view.dialog.GeoAutoTextController', {
     extend: 'Ext.app.ViewController',
     requires: ['EossEOCatalog.utilities.Util','EossEOCatalog.utilities.BaseUrls'],

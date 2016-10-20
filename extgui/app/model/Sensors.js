@@ -1,4 +1,6 @@
 /**
+ * EOSS catalog system
+ *
  * The model for a sensor entity
  *
  * @summary   The model for a sensor entity

@@ -1,4 +1,6 @@
 /**
+ * EOSS catalog system
+ *
  * The store for the website about section giving credits, copyright and general information.
  *
  * @summary   The store for the website about section

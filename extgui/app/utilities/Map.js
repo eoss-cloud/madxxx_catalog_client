@@ -1,4 +1,6 @@
 /**
+ * EOSS catalog system
+ *
  * Class with functions for OpenLayers vector layer styling
  *
  * @summary   Class with functions for OpenLayers vector layer styling

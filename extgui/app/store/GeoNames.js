@@ -1,4 +1,6 @@
 /**
+ * EOSS catalog system
+ *
  * The store for geographic names implementing the geonames model and defining the service proxy
  *
  * @summary   The store for geographic names

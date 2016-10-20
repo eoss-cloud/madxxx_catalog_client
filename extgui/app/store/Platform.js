@@ -1,4 +1,6 @@
 /**
+ * EOSS catalog system
+ *
  * The store for sensor platform implementing the platform model
  *
  * @summary   The store for sensor platform

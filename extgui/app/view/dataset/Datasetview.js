@@ -1,3 +1,15 @@
+/**
+ * EOSS catalog system
+ *
+ * View widget showing search result as cards with hover ans selction interactions
+ *
+ * @summary   View widget showing search result as cards
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
 
 Ext.define('EossEOCatalog.view.dataset.Datasetview',{
     extend: 'Ext.view.View',

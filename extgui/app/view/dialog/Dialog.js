@@ -1,18 +1,28 @@
+/**
+ * EOSS catalog system
+ *
+ * Form panel widget for search parameter definition and request submission
+ *
+ * @summary   Form panel widget for search parameter definition and request submission
+ *
+ * @author     Steffen Gebhardt, Thilo Wehrmann
+ * @copyright  Copyright 2016, EOSS GmbH
+ * @version    1.0.0
+ * @license    GPL
+ */
+
 Ext.define('EossEOCatalog.view.dialog.Dialog', {
     extend: 'Ext.form.Panel',
     xtype: 'projectdialog',
     requires: [
-        'EossEOCatalog.view.dialog.DialogController',
-        'EossEOCatalog.view.dialog.DialogModel',
+
+
         'EossEOCatalog.view.dialog.GeoAutoText',
         'Ext.slider.*',
         'EossEOCatalog.view.dialog.SensorCombo',
         'EossEOCatalog.view.dialog.SubmitButton'
     ],
-    controller: 'dialog-dialog',
-    viewModel: {
-        type: 'dialog-dialog'
-    },
+
     bodyPadding: 10,
     margin: '5 5 5 5',
     border: false,

@@ -1,5 +1,7 @@
 /**
- * The store for sensors implementing the dataset model and defining the service proxy and on load behaviour
+ * EOSS catalog system
+ *
+ * The store for datasets implementing the dataset model and defining the service proxy and on load behaviour
  *
  * @summary   The store for datasets
  *

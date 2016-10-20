@@ -1,4 +1,6 @@
 /**
+ * EOSS catalog system
+ *
  * Class with functions required in app
  *
  * @summary   Class with functions required in app

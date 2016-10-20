@@ -1,4 +1,6 @@
 /**
+ * EOSS catalog system
+ *
  * Class for global service base url variables
  *
  * @summary   Class for global service base url variables

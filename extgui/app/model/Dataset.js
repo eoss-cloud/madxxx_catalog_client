@@ -1,4 +1,6 @@
 /**
+ * EOSS catalog system
+ *
  * The model for a catalog dataset entity
  *
  * @summary   The model for a catalog dataset

@@ -1,4 +1,6 @@
 /**
+ * EOSS catalog system
+ *
  * The model for a geographic name entity
  *
  * @summary   The model for a geographic name entity

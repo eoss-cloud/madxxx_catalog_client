@@ -1,4 +1,6 @@
 /**
+ * EOSS catalog system
+ *
  * The model for a sensor platform entity
  *
  * @summary   The model for a sensor platform entity
