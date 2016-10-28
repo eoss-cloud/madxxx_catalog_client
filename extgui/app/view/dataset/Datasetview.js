@@ -100,7 +100,7 @@ Ext.define('EossEOCatalog.view.dataset.Datasetview',{
 
 
     listeners: {
-        select: 'onSelect',
+        // select: 'onSelect',
         itemmouseenter: 'onMouseEnter',
         itemmouseleave: 'onMouseLeave'
         // ,
