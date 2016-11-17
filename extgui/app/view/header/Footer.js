@@ -41,7 +41,7 @@ Ext.define('EossEOCatalog.view.header.Footer', {
     }, {
         xtype: 'component',
         cls: 'app-footer-text',
-        html: ' &copy; Earth Observation Solutions and Services <a href="http://www.eoss.cloud" target="_blank">EOSS</a> GmbH',
+        html: ' &copy; Earth Observation Solutions and Services <a href="https://www.eoss.cloud" target="_blank">EOSS</a> GmbH',
         flex: 0.3
     }, {
         xtype: 'feedbackbutton',
