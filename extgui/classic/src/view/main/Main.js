@@ -18,9 +18,11 @@ Ext.define('EossEOCatalog.view.main.Main', {
         type: 'main'
     },
 
+
     layout: {
         type: 'border'
     },
+
     defaults: {
         split: false
     },
