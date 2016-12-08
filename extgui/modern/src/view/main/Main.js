@@ -6,10 +6,11 @@ Ext.define('EossEOCatalog.view.main.Main', {
         'EossEOCatalog.view.main.MainController',
         'EossEOCatalog.view.main.MainModel',
         'EossEOCatalog.utilities.BaseUrls',
-        'EossEOCatalog.view.main.LeftPanel',
         'EossEOCatalog.view.header.Header',
         'EossEOCatalog.view.header.Footer',
-        'EossEOCatalog.view.main.ViewPanel'
+        // 'EossEOCatalog.view.main.ViewPanel',
+        'EossEOCatalog.view.map.MapPanel',
+        'EossEOCatalog.view.dialog.Dialog',
     ],
 
     controller: 'main',
@@ -17,46 +18,49 @@ Ext.define('EossEOCatalog.view.main.Main', {
         type: 'main'
     },
 
+
     layout: {
         type: 'border'
     },
+
     defaults: {
         split: false
     },
 
     items: [{
         region: 'north',
-        items: [{
-            xtype: 'app-header'
-        }]
-    }, {
-        region: 'west',
-        width: 480,
-        //flex: .4,
-        layout: 'fit',
+
         items: [
-            {xtype: 'main-left'}
+            {
+                xtype: 'panel',
+                layout: 'hbox',
+                items: [
+                    {
+                        xtype: 'app-header',
+                        width: 450
+                    }, {
+                        xtype: 'projectdialog'
+                    }
+                ]
+            }
         ]
     }, {
         region: 'center',
-        //layout: 'fit',
-        width: 420,
-        flex: 0.5,
+        layout: 'fit',
+        flex: 1,
         items: {
-            xtype: 'aggregatetilecloudpanel',
-            title: 'Summary'
+            xtype: 'map-panel',
         }
     }, {
-        region: 'east',
-        height: innerHeight * .7,
-        width: innerWidth * .8,
-        flex: .65,
-        //flex: 1,
-        layout: 'fit',
-        items: [{
-            xtype: 'viewpanel'
-        }]
-    }, {
+    //     region: 'east',
+    //     height: innerHeight * .7,
+    //     width: innerWidth * .8,
+    //     flex: .83,
+    //     layout: 'fit',
+    //     items: [{
+    //         xtype: 'viewpanel'
+    //     }]
+    // }, {
         region: 'south',
         height: 30,
         items: [{

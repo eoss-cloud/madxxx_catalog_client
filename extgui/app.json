@@ -230,14 +230,14 @@
     /**
      * Settings specific to modern toolkit builds.
      */
-/*    "modern": {
+    "modern": {
         "js": [
             // Remove this entry to individually load sources from the framework.
             {
                 "path": "${framework.dir}/build/ext-modern-all-debug.js"
             }
         ]
-    },*/
+    },
 
     /**
      * List of all CSS assets in the right inclusion order.
@@ -563,14 +563,17 @@
                 "GeoExt"
             ]
         }
-//    ,
-//        "modern": {
-//            "toolkit": "modern",
-//            "theme": "theme-triton",
-//            "sass": {
-//                // "save": "modern/sass/save.scss"
-//            }
-//        }
+    ,
+        "modern": {
+            "toolkit": "classic",
+            "theme": "eoss-catalog-theme",
+            "sass": {
+                // "save": "modern/sass/save.scss"
+            },
+            "requires": [
+                "GeoExt"
+            ]
+        }
     },
     
 
