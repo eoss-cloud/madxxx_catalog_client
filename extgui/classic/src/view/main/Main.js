@@ -34,6 +34,7 @@ Ext.define('EossEOCatalog.view.main.Main', {
             {
                 xtype: 'panel',
                 layout: 'hbox',
+                autoScroll:true,
                 items: [
                     {
                         xtype: 'app-header',
@@ -55,8 +56,9 @@ Ext.define('EossEOCatalog.view.main.Main', {
         region: 'east',
         height: innerHeight * .7,
         width: innerWidth * .8,
-        flex: .83,
+        flex: .75,
         layout: 'fit',
+        autoScroll:true,
         items: [{
             xtype: 'viewpanel'
         }]

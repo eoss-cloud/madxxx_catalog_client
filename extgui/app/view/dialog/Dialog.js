@@ -22,7 +22,7 @@ Ext.define('EossEOCatalog.view.dialog.Dialog', {
         'EossEOCatalog.view.dialog.SensorCombo',
         'EossEOCatalog.view.dialog.SubmitButton'
     ],
-
+    layout: 'fit',
     bodyPadding: 10,
     margin: '5 5 5 5',
     border: false,
@@ -113,56 +113,7 @@ Ext.define('EossEOCatalog.view.dialog.Dialog', {
 
             ]
         }
-        // ,
-        // {
-        //     xtype: "panel",
-        //     layout: 'hbox',
-        //     items: [
-        //         {
-        //             xtype: 'fieldset',
-        //             layout: 'hbox',
-        //             title: 'Define Date Range',
-        //             items: [{
-        //                 xtype: 'datefield',
-        //                 name: 'datefrom',
-        //                 value: new Date(new Date().setDate(new Date().getDate() - 90)),
-        //                 flex: 1
-        //             }, {
-        //                 xtype: 'datefield',
-        //                 name: 'dateto',
-        //                 value: new Date(),
-        //                 flex: 1,
-        //                 layout: 'fit'
-        //             }],
-        //             flex: 1
-        //         },
-        //         {
-        //             xtype: 'fieldset',
-        //             layout: 'hbox',
-        //             title: 'Set Cloud Cover Percentage',
-        //             items: [{
-        //                 xtype: 'slider',
-        //                 name: 'cloudslider',
-        //                 increment: 5,
-        //                 minValue: 0,
-        //                 maxValue: 100,
-        //                 value: 60,
-        //                 flex: 1
-        //             }],
-        //             flex: 1
-        //         }
-        //     ]
-        // }, {
-        //     xtype: "fieldset",
-        //     layout: 'fit',
-        //     title: 'Search',
-        //     bottom: 30,
-        //     items: [
-        //         {
-        //             xtype: 'submitbutton',
-        //             flex: 1
-        //         }]
-        // }
+
     ]
 
 

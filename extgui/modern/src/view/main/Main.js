@@ -8,7 +8,7 @@ Ext.define('EossEOCatalog.view.main.Main', {
         'EossEOCatalog.utilities.BaseUrls',
         'EossEOCatalog.view.header.Header',
         'EossEOCatalog.view.header.Footer',
-        // 'EossEOCatalog.view.main.ViewPanel',
+        'EossEOCatalog.view.main.ViewPanel',
         'EossEOCatalog.view.map.MapPanel',
         'EossEOCatalog.view.dialog.Dialog',
     ],
@@ -33,12 +33,13 @@ Ext.define('EossEOCatalog.view.main.Main', {
         items: [
             {
                 xtype: 'panel',
-                layout: 'hbox',
+                layout: 'fit',
+                autoScroll:true,
                 items: [
                     {
-                        xtype: 'app-header',
-                        width: 450
-                    }, {
+                    //     xtype: 'app-header',
+                    //     width: 450
+                    // }, {
                         xtype: 'projectdialog'
                     }
                 ]
@@ -52,15 +53,15 @@ Ext.define('EossEOCatalog.view.main.Main', {
             xtype: 'map-panel',
         }
     }, {
-    //     region: 'east',
-    //     height: innerHeight * .7,
-    //     width: innerWidth * .8,
-    //     flex: .83,
-    //     layout: 'fit',
-    //     items: [{
-    //         xtype: 'viewpanel'
-    //     }]
-    // }, {
+        region: 'east',
+        height: innerHeight * .7,
+        width: innerWidth * .8,
+        flex: .83,
+        layout: 'fit',
+        items: [{
+            xtype: 'viewpanel'
+        }]
+    }, {
         region: 'south',
         height: 30,
         items: [{
