@@ -16,7 +16,7 @@
  */
 
 
-var baseUrl = 'http://api.eoss.cloud/';
+var baseUrl = 'https://api.eoss.cloud/';
 
 Ext.define('EossEOCatalog.utilities.BaseUrls', {
     singleton: true,
