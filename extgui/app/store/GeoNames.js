@@ -29,14 +29,12 @@ Ext.define('EossEOCatalog.store.GeographicNames', {
         },
         reader: {
             type: 'json',
-            rootProperty: 'entities',
+            // rootProperty: 'entities',
+            rootProperty: 'references',
             successProperty: 'success'
         },
         actionMethods: {
             read: "GET"
-        },
-        headers : {
-        'Content-Type' : 'application/json;charset=utf-8'
         }
     }
 

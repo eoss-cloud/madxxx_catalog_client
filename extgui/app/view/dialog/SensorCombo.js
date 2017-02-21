@@ -24,7 +24,8 @@ Ext.define('EossEOCatalog.view.dialog.SensorCombo', {
         type: 'platform'
     },
     queryMode: 'remote',
-    displayField: 'label',
+    // displayField: 'label',
+    displayField: 'name',
     valueField: 'id',
     multiSelect: false,
     listeners: {

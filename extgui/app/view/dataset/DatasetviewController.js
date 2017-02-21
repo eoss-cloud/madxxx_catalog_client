@@ -17,7 +17,8 @@ Ext.define('EossEOCatalog.view.dataset.DatasetviewController', {
     requires: ['EossEOCatalog.utilities.Util'],
 
     onMouseEnter: function (sender, record) {
-        EossEOCatalog.utilities.Util.ol_highlightfeatures(record.get('tile_identifier'))
+        EossEOCatalog.utilities.Util.ol_highlightfeatures(record.get('tile'))
+
     },
     onMouseLeave: function (sender, record) {
         EossEOCatalog.utilities.Util.ol_dishighlightfeatures();

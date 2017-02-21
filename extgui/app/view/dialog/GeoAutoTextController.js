@@ -19,9 +19,9 @@ Ext.define('EossEOCatalog.view.dialog.GeoAutoTextController', {
     onTextEdit: function (record) {
 
         input = record.rawValue;
-        //console.log(input)
+
         var store = this.getView().getStore();
-        store.getProxy().setExtraParam("entity_name", input);
+        store.getProxy().setExtraParam("pattern", input);
         store.load();
 
 
@@ -29,19 +29,17 @@ Ext.define('EossEOCatalog.view.dialog.GeoAutoTextController', {
     onSelect: function (record) {
 
         //var group_id = record.value;
-        var entity_id = record.rawValue;
+        var reference = record.rawValue;
 
         store = record.getStore();
 
-        var entity = store.findRecord('entity_id', entity_id);
-        var reference_id = entity.get('reference_id');
-        var group_id = entity.get('group_id');
+        var reference = store.findRecord('reference', reference);
+        var reference_name = reference.get('reference');
+        var reference_type = reference.get('reference_type');
 
-        var requesturl = entity.get('resource_geojson');
+        var requesturl = EossEOCatalog.utilities.BaseUrls.georeference_geojson_url;
+        requesturl = requesturl + reference_type + '/' + reference_name+ '.geojson'
         EossEOCatalog.utilities.Util.ol_addregionlayer(requesturl,EossEOCatalog.utilities.Util.regionlayername);
-
-
-
 
     }
 

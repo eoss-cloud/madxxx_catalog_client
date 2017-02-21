@@ -63,13 +63,14 @@ Ext.define('EossEOCatalog.store.Dataset', {
         url: EossEOCatalog.utilities.BaseUrls.catalog_search_url,
         reader: {
             type: 'json',
-            rootProperty: 'found_dataset',
+            rootProperty: 'scenes',
             totalProperty: 'count',
             successProperty: 'success'
-        },
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-        },
+        }
+        ,
+        // headers: {
+        //     'Content-Type': 'application/json;charset=utf-8'
+        // },
         extraParams: {
             query: 'bar'
         }
@@ -80,11 +81,11 @@ Ext.define('EossEOCatalog.store.Dataset', {
         load: function (store) {
             store.sort([
                 {
-                    property: 'tile_identifier',
+                    property: 'tile',
                     direction: 'ASC'
                 },
                 {
-                    property: 'acq_time',
+                    property: 'acq_date',
                     direction: 'ASC'
                 }
             ]);
@@ -99,7 +100,7 @@ Ext.define('EossEOCatalog.store.Dataset', {
     }
     ,
     sortInfo: {
-        field: 'tile_identifier',
+        field: 'tile',
         direction: 'ASC'
     }
 

@@ -19,10 +19,13 @@
 Ext.define('EossEOCatalog.model.Sensors', {
     extend: 'Ext.data.Model',
     fields: [
-        {name: 'sensor_name', type: 'string'},
-        {name: 'proc_level', type: 'string'},
+        // {name: 'sensor_name', type: 'string'},
+        // {name: 'proc_level', type: 'string'},
+        // {name: 'id', type: 'int'},
+        // {name: 'label', type: 'string'}
+
         {name: 'id', type: 'int'},
-        {name: 'label', type: 'string'}
+        {name: 'name', type: 'string'}
 
     ]
 });

@@ -31,16 +31,16 @@ Ext.define('EossEOCatalog.view.dialog.GeoAutoText', {
     tpl: Ext.create('Ext.XTemplate',
         '<tpl for=".">',
         '<div class="x-boundlist-item" style="border-bottom:1px solid #f0f0f0;">',
-        '<div>{entity_id}</div>',
-        '<div><b>Category:</b> {group_shortcut}</div>',
+        '<div>{reference}</div>',
+        '<div><b>Category:</b> {reference_type}</div>',
         '</div>',
         '</tpl>'),
     displayTpl: Ext.create('Ext.XTemplate',
         '<tpl for=".">',
-        '{entity_id}',
+        '{reference}',
         '</tpl>'
     ),
-    valueField: 'reference_id',
+    valueField: 'reference',
     listeners: {
         change: 'onTextEdit',
         select: 'onSelect'

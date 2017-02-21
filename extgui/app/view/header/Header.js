@@ -11,7 +11,7 @@
  * @license    GPL
  */
 
-document.title = 'EOSS Image Catalog Lite';
+document.title = 'EOSS Image Catalog';
 document.subtitle = 'Get the images that suit your project';
 
 Ext.define('EossEOCatalog.view.header.Header', {

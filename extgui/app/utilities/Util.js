@@ -28,8 +28,8 @@ Ext.define('EossEOCatalog.utilities.Util', {
     doorbellid: 4584,
     doorbellkey: 'pfW1ZgHBlkp3CCtW7PzEskWsGmUVxCejoABJHxdl5L4kHbtrcGLlQ8TcOKkD3qzR',
 
-    update_datasetcounter: function (){
-        Ext.ComponentQuery.query("datasetcounter")[0].setHtml( '<div class="scenecounter">'+this.filtered_count +'</div>' + '<div class="sep"> / </div>' + '<div class="scenecounterall">'  + this.total_count + '</div>' + '<div class="normal"> scenes in </div>' + '<div class="tilecounter">' +this.selected_tiles+ '</div>'+'<div class="sep"> / </div>'+'<div class="tilecounterall">' +this.total_tiles+ '</div>'+'<div class="normal"> tiles </div>');
+    update_datasetcounter: function () {
+        Ext.ComponentQuery.query("datasetcounter")[0].setHtml('<div class="scenecounter">' + this.filtered_count + '</div>' + '<div class="sep"> / </div>' + '<div class="scenecounterall">' + this.total_count + '</div>' + '<div class="normal"> scenes in </div>' + '<div class="tilecounter">' + this.selected_tiles + '</div>' + '<div class="sep"> / </div>' + '<div class="tilecounterall">' + this.total_tiles + '</div>' + '<div class="normal"> tiles </div>');
     },
 
     ol_addregionlayer: function (url, name) {
@@ -121,12 +121,12 @@ Ext.define('EossEOCatalog.utilities.Util', {
                 EossEOCatalog.utilities.Util.selected_tiles = features.getLength();
                 for (var i = 0; i < features.getLength(); i++) {
                     var feature = features.item(i);
-                    var tile_id = feature.get('tile_identifier');
+                    var tile_id = feature.get('identifier');
                     tile_ids.push(tile_id)
                 }
                 store.clearFilter();
                 store.filterBy(function (record, id) {
-                    return Ext.Array.contains(tile_ids, record.get('tile_identifier'));
+                    return Ext.Array.contains(tile_ids, record.get('tile'));
                 });
             } else {
                 store.clearFilter();
@@ -150,7 +150,7 @@ Ext.define('EossEOCatalog.utilities.Util', {
         var store = Ext.ComponentQuery.query("datasetview")[0].getStore();
         store.getFilters().replaceAll({
             fn: function (record) {
-                return record.get('tile_identifier') == tile_id;
+                return record.get('tile') == tile_id;
             }
         });
         store.sort('acq_date', 'ASC');
@@ -174,7 +174,7 @@ Ext.define('EossEOCatalog.utilities.Util', {
                 var features = layer.getSource().getFeatures();
                 if (features) {
                     for (i = 0; i < features.length; i++) {
-                        if (features[i].get('tile_identifier') == tile_identifier) {
+                        if (features[i].get('identifier') == tile_identifier) {
                             selectedFeatures.push(features[i]);
                         }
                     }
@@ -205,50 +205,47 @@ Ext.define('EossEOCatalog.utilities.Util', {
         if (params.sensorcombo === '') {
             console.log('no sensor')
 
-
-            // } else if (params.geoautotext === '') {
-            //     console.log('no region')
         } else {
 
-            o.clouds = params.cloudslider;
-
-            var d = new Object()
-            d.start_date = params.datefrom
-            d.end_date = params.dateto
-            o.daterange = [d];
-
+            var clouds = params.cloudslider;
+            var date_from = params.datefrom;
+            var date_to = params.dateto;
             var sensors_values = formPanel.getForm().findField("sensorcombo").getValue();
             var sensors_store = formPanel.getForm().findField("sensorcombo").getStore();
             var sensors = []
             var record = sensors_store.findRecord('id', sensors_values);
-            var name = record.get('label');
-            var level = record.get('proc_level');
-            s = new Object()
-            s.name = name;
-            sensors.push(s)
-            o.sensors = sensors
-
+            var sensorname = record.get('name');
             var reference_id = formPanel.getForm().findField("geoautotext").getValue();
             var geonames_store = formPanel.getForm().findField("geoautotext").getStore();
-            var entity = geonames_store.findRecord('reference_id', reference_id);
-            var group_id = entity.get('group_id');
-            var region = new Object()
-            region.ref_id = reference_id;
-            region.ref_group = group_id;
-            o.areas = [region]
+            var reference = geonames_store.findRecord('reference', reference_id);
+            var reference_type = reference.get('reference_type');
+            var reference_name = reference.get('reference');
+
+            o.start_date = date_from;
+            o.end_date = date_to;
+            o.mission = sensorname;
+            o.clouds = clouds;
+            o.reference_name = reference_name
+            o.referencetype_name = reference_type
 
             var store = Ext.ComponentQuery.query("datasetview")[0].getStore();
-            store.getProxy().setExtraParam('query', Ext.JSON.encode(o));
+            // store.getProxy().setExtraParam('query', Ext.JSON.encode(o));
+            store.getProxy().setExtraParam('start_date', o.start_date);
+            store.getProxy().setExtraParam('end_date', o.end_date);
+            store.getProxy().setExtraParam('clouds', o.clouds);
+            store.getProxy().setExtraParam('mission', o.mission);
+            store.getProxy().setExtraParam('reference_name', o.reference_name);
+            store.getProxy().setExtraParam('referencetype_name', o.referencetype_name);
             store.load();
             store.clearFilter();
 
-            var layerurl = EossEOCatalog.utilities.BaseUrls.catalog_search_geojson_url + '?from_date=' + d.start_date + '&to_date=' + d.end_date + '&sensor=' + s.name + '&ref_group=' + region.ref_group + '&ref_id=' + region.ref_id + '&clouds=' + o.clouds;
+            var layerurl = EossEOCatalog.utilities.BaseUrls.catalog_search_geojson_url + '?start_date=' + o.start_date + '&end_date=' + o.end_date + '&mission=' + o.mission + '&reference_name=' + o.reference_name + '&referencetype_name=' + o.referencetype_name + '&clouds=' + o.clouds;
             this.ol_adddatasetlayer(layerurl, this.datasetlayername);
-
-            var csvurl = EossEOCatalog.utilities.BaseUrls.catalog_search_download_csv_url + '?from_date=' + d.start_date + '&to_date=' + d.end_date + '&sensor=' + s.name + '&ref_group=' + region.ref_group + '&ref_id=' + region.ref_id + '&clouds=' + o.clouds;
-            var xlsurl = EossEOCatalog.utilities.BaseUrls.catalog_search_download_xls_url + '?from_date=' + d.start_date + '&to_date=' + d.end_date + '&sensor=' + s.name + '&ref_group=' + region.ref_group + '&ref_id=' + region.ref_id + '&clouds=' + o.clouds;
-
-            Ext.ComponentQuery.query("datasetdownload")[0].setHtml('<div class="xlsdown"><a href="'+xlsurl+'">xls</a></div> <div class="csvdown"><a href="'+csvurl+'">csv</a></div>' );
+            //
+            // var csvurl = EossEOCatalog.utilities.BaseUrls.catalog_search_download_csv_url + '?from_date=' + d.start_date + '&to_date=' + d.end_date + '&sensor=' + s.name + '&ref_group=' + region.ref_group + '&ref_id=' + region.ref_id + '&clouds=' + o.clouds;
+            // var xlsurl = EossEOCatalog.utilities.BaseUrls.catalog_search_download_xls_url + '?from_date=' + d.start_date + '&to_date=' + d.end_date + '&sensor=' + s.name + '&ref_group=' + region.ref_group + '&ref_id=' + region.ref_id + '&clouds=' + o.clouds;
+            //
+            // Ext.ComponentQuery.query("datasetdownload")[0].setHtml('<div class="xlsdown"><a href="'+xlsurl+'">xls</a></div> <div class="csvdown"><a href="'+csvurl+'">csv</a></div>' );
 
         }
 
