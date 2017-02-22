@@ -53,7 +53,7 @@ Ext.define('EossEOCatalog.utilities.Util', {
                 map.getView().fit(extent, map.getSize());
             }
         });
-        var layer = new ol.layer.Vector({
+        layer = new ol.layer.Vector({
             name: name,
             source: vectorSource,
             style: EossEOCatalog.utilities.Map.simple_vector_style
@@ -99,12 +99,12 @@ Ext.define('EossEOCatalog.utilities.Util', {
 
 
         var style = EossEOCatalog.utilities.Map.dataset_vector_style;
-        var layer = new ol.layer.Vector({
+        dslayer = new ol.layer.Vector({
             name: name,
             source: vectorSource,
             style: style
         });
-        mp.addLayer(layer);
+        mp.addLayer(dslayer);
 
         var select = new ol.interaction.Select({
             condition: ol.events.condition.click,
