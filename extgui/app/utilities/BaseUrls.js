@@ -16,9 +16,9 @@
  */
 
 
-// var baseUrl = 'https://api.eoss.cloud/';
-var baseUrl = 'http://127.0.0.1:5000/api/v1/';
-
+var baseUrl = 'https://api.eoss.cloud/api/v1/';
+// var baseUrl = 'http://127.0.0.1:5000/api/v1/';
+//
 Ext.define('EossEOCatalog.utilities.BaseUrls', {
     singleton: true,
 
