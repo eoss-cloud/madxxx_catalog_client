@@ -83,7 +83,7 @@ Ext.define('EossEOCatalog.view.dataset.Datasetview',{
                                 '<a href={scihub_link} target="_blank"><div id="scihub_thumbnailimage"></div></a>',
                             '</tpl>',
                             '<tpl if="this.hasLink(aws_tile)">',
-                             '<a href={[EossEOCatalog.utilities.BaseUrls.aws_sentinel_baseurl]}{aws_tile} target="_blank"><div id="awsbucket_thumbnailimage"></div></a>',
+                             '<a href={[EossEOCatalog.utilities.BaseUrls.aws_sentinel_baseurl]}{aws_tile}/ target="_blank"><div id="awsbucket_thumbnailimage"></div></a>',
                             '</tpl>',
                         '</th>',
                       '</tr>',
