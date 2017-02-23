@@ -17,16 +17,21 @@ Ext.define('EossEOCatalog.view.map.Map', {
 
 
     map: new ol.Map({
+        // layers: [
+        //     new ol.layer.Tile({
+        //         source: new ol.source.Stamen({
+        //             layer: 'watercolor'
+        //         })
+        //     }),
+        //     new ol.layer.Tile({
+        //         source: new ol.source.Stamen({
+        //             layer: 'terrain-labels'
+        //         })
+        //     })
+        // ],
         layers: [
             new ol.layer.Tile({
-                source: new ol.source.Stamen({
-                    layer: 'watercolor'
-                })
-            }),
-            new ol.layer.Tile({
-                source: new ol.source.Stamen({
-                    layer: 'terrain-labels'
-                })
+                source: new ol.source.OSM()
             })
         ],
         view: new ol.View({
