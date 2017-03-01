@@ -216,16 +216,10 @@ Ext.define('EossEOCatalog.utilities.Util', {
             var record = sensors_store.findRecord('id', sensors_values);
             var sensorname = record.get('name');
 
-            var reference_type = formPanel.getForm().findField("geoautotext").getValue();
             var reference_name = formPanel.getForm().findField("geoautotext").getRawValue();
+            var reference_id = formPanel.getForm().findField("geoautotext").getValue();
+            var reference_type = Ext.state.Manager.get("reference_type");
 
-            // var reference_id = formPanel.getForm().findField("geoautotext").getValue();
-            // console.log(reference_id)
-            // console.log(formPanel.getForm().findField("geoautotext").getRawValue())
-            // var geonames_store = formPanel.getForm().findField("geoautotext").getStore();
-            // var reference = geonames_store.findRecord('reference', reference_id);
-            // var reference_type = reference.get('reference_type');
-            // var reference_name = reference.get('reference');
 
             o.start_date = date_from;
             o.end_date = date_to;
@@ -233,6 +227,7 @@ Ext.define('EossEOCatalog.utilities.Util', {
             o.clouds = clouds;
             o.reference_name = reference_name
             o.referencetype_name = reference_type
+            o.reference_id = reference_id;
 
             var store = Ext.ComponentQuery.query("datasetview")[0].getStore();
             // store.getProxy().setExtraParam('query', Ext.JSON.encode(o));
@@ -240,13 +235,15 @@ Ext.define('EossEOCatalog.utilities.Util', {
             store.getProxy().setExtraParam('end_date', o.end_date);
             store.getProxy().setExtraParam('clouds', o.clouds);
             store.getProxy().setExtraParam('mission', o.mission);
-            store.getProxy().setExtraParam('reference_name', o.reference_name);
+            store.getProxy().setExtraParam('reference_id', o.reference_id);
             store.getProxy().setExtraParam('referencetype_name', o.referencetype_name);
             store.load();
             store.clearFilter();
 
-            var layerurl = EossEOCatalog.utilities.BaseUrls.catalog_search_geojson_url + '?start_date=' + o.start_date + '&end_date=' + o.end_date + '&mission=' + o.mission + '&reference_name=' + o.reference_name + '&referencetype_name=' + o.referencetype_name + '&clouds=' + o.clouds;
+            var layerurl = EossEOCatalog.utilities.BaseUrls.catalog_search_geojson_url + '?start_date=' + o.start_date + '&end_date=' + o.end_date + '&mission=' + o.mission + '&reference_id=' + o.reference_id + '&referencetype_name=' + o.referencetype_name + '&clouds=' + o.clouds;
+            // var layerurl = EossEOCatalog.utilities.BaseUrls.catalog_search_geojson_url + '?start_date=' + o.start_date + '&end_date=' + o.end_date + '&mission=' + o.mission + '&reference_name=' + o.reference_name + '&referencetype_name=' + o.referencetype_name + '&clouds=' + o.clouds;
             this.ol_adddatasetlayer(layerurl, this.datasetlayername);
+
             //
             // var csvurl = EossEOCatalog.utilities.BaseUrls.catalog_search_download_csv_url + '?from_date=' + d.start_date + '&to_date=' + d.end_date + '&sensor=' + s.name + '&ref_group=' + region.ref_group + '&ref_id=' + region.ref_id + '&clouds=' + o.clouds;
             // var xlsurl = EossEOCatalog.utilities.BaseUrls.catalog_search_download_xls_url + '?from_date=' + d.start_date + '&to_date=' + d.end_date + '&sensor=' + s.name + '&ref_group=' + region.ref_group + '&ref_id=' + region.ref_id + '&clouds=' + o.clouds;

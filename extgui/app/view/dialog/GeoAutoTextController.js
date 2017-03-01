@@ -33,13 +33,18 @@ Ext.define('EossEOCatalog.view.dialog.GeoAutoTextController', {
 
         store = record.getStore();
 
+
         var reference = store.findRecord('reference', reference);
         var reference_name = reference.get('reference');
         var reference_type = reference.get('reference_type');
+        var reference_id = reference.get('reference_id');
+        Ext.state.Manager.set("reference_type",reference_type);
 
         var requesturl = EossEOCatalog.utilities.BaseUrls.georeference_geojson_url;
-        requesturl = requesturl + reference_type + '/' + reference_name+ '.geojson'
+        requesturl = requesturl + reference_type + '/' + reference_id+ '.geojson'
         EossEOCatalog.utilities.Util.ol_addregionlayer(requesturl,EossEOCatalog.utilities.Util.regionlayername);
+
+
 
     }
 

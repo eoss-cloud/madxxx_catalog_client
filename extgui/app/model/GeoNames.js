@@ -21,7 +21,8 @@ Ext.define('EossEOCatalog.model.GeographicNames', {
     fields: [
 
         {name: 'reference', type: 'string'},
-        {name: 'reference_type', type: 'string'}
+        {name: 'reference_type', type: 'string'},
+        {name: 'reference_id', type: 'string'}
 
     ]
 });
