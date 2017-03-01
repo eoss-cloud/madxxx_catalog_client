@@ -40,7 +40,7 @@ Ext.define('EossEOCatalog.view.dialog.GeoAutoText', {
         '{reference}',
         '</tpl>'
     ),
-    valueField: 'reference',
+    valueField: 'reference_type',
     listeners: {
         change: 'onTextEdit',
         select: 'onSelect'

@@ -215,11 +215,17 @@ Ext.define('EossEOCatalog.utilities.Util', {
             var sensors = []
             var record = sensors_store.findRecord('id', sensors_values);
             var sensorname = record.get('name');
-            var reference_id = formPanel.getForm().findField("geoautotext").getValue();
-            var geonames_store = formPanel.getForm().findField("geoautotext").getStore();
-            var reference = geonames_store.findRecord('reference', reference_id);
-            var reference_type = reference.get('reference_type');
-            var reference_name = reference.get('reference');
+
+            var reference_type = formPanel.getForm().findField("geoautotext").getValue();
+            var reference_name = formPanel.getForm().findField("geoautotext").getRawValue();
+
+            // var reference_id = formPanel.getForm().findField("geoautotext").getValue();
+            // console.log(reference_id)
+            // console.log(formPanel.getForm().findField("geoautotext").getRawValue())
+            // var geonames_store = formPanel.getForm().findField("geoautotext").getStore();
+            // var reference = geonames_store.findRecord('reference', reference_id);
+            // var reference_type = reference.get('reference_type');
+            // var reference_name = reference.get('reference');
 
             o.start_date = date_from;
             o.end_date = date_to;
