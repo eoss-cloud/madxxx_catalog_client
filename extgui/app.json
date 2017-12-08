@@ -222,7 +222,7 @@
         "js": [
             // Remove this entry to individually load sources from the framework.
             {
-                "path": "${framework.dir}/build/ext-all-rtl-debug.js"
+                "path": "${framework.dir}/build/ext-all-rtl.js"
             }
         ]
     },
@@ -234,7 +234,7 @@
         "js": [
             // Remove this entry to individually load sources from the framework.
             {
-                "path": "${framework.dir}/build/ext-modern-all-debug.js"
+                "path": "${framework.dir}/build/ext-modern-all.js"
             }
         ]
     },

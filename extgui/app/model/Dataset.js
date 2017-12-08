@@ -29,6 +29,7 @@ Ext.define('EossEOCatalog.model.Dataset', {
         {name: 'nodata_cover', type: 'float', flex: 1 },
         {name: 'quicklook', mapping: 'resources.quicklook', type: 'string', flex: 1 },
         {name: 'google_link', mapping: 'resources.google.link', type: 'string', flex: 1 },
+        {name: 'ls_aws_link', mapping: 'resources.aws.link', type: 'string', flex: 1 },
         {name: 'aws_link', mapping: 'resources.s3public.zip', type: 'string', flex: 1 },
         {name: 'aws_tile', mapping: 'resources.s3public.tile', type: 'string', flex: 1 },
         {name: 'usgs_link', mapping: 'resources.usgs.link', type: 'string', flex: 1 },

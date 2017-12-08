@@ -95,6 +95,8 @@ Ext.define('EossEOCatalog.store.Dataset', {
             EossEOCatalog.utilities.Util.total_count = store.getTotalCount();
             EossEOCatalog.utilities.Util.update_datasetcounter();
 
+            console.log(store)
+
         }
 
     }
